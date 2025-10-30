@@ -1,0 +1,63 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(to left, red, white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 1000;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
+  }
+
+  nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  nav a:hover {
+    color: black;
+  }
+
+  main {
+    padding-top: 80px;
+  }
+
+  section {
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  #home { background: #f1f1f1; }
+  #sobre { background: #e1e1e1; }
+  #servicos { background: #d1d1d1; }
+  #contato { background: #c1c1c1; }
+
+  footer {
+    background: linear-gradient(to right, red, white);
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
