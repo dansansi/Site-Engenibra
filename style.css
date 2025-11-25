@@ -1,3 +1,5 @@
+/* Configs globais */
+
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +11,13 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #08003b;
 }
+
+/* Configs globais */
+
+/* Configs de header */
 
 .LogoEmpresa {
   width: 11vh;
@@ -29,6 +35,7 @@ header {
   align-items: center;
   padding: 0 40px;
   z-index: 1000;
+  font-size: 1rem;
 }
 
 header nav {
@@ -47,6 +54,9 @@ header nav {
   font-weight: 600;
 }
 
+
+/* Configs do corpo */
+
 main {
   padding-top: 0px;
 }
@@ -56,7 +66,19 @@ section {
   color: #08003b;
   font-size: 20px;
   text-align: left;
-  padding: 10% 25%;
+  padding: 3% 25%;
+}
+
+.TituloSessão {
+  font-size: 250%;
+}
+
+/* Configs da sessão "inicio" */
+
+@media (max-width: 600px) {
+  .Inicio {
+    margin-top: 90px;
+  }
 }
 
 .Inicio {
@@ -87,8 +109,6 @@ section {
 
 .Inicio h1 {
   padding-top: 10%;
-  font-size: 250%;
-
 }
 
 .Inicio p {
@@ -111,9 +131,51 @@ section {
   transform: rotate(180deg);
 }
 
+
+/* Configs da sessão "projetos" */
+
 .Projetos {
   background-color: white;
 }
+
+.Projetos .scroll-container {
+  padding-left: 0;
+  margin-left: -35%;
+  width: calc(150% + 25%);
+  padding-top: 10%;
+}
+
+.scroll-container {
+  display: flex;
+  gap: 45px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 15px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.item {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+}
+
+.item img {
+  width: 330px;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+/* Configs da sessão "Sobre nós" */
 
 .Sobre-nós {
   background-color: #f3f7fa;
