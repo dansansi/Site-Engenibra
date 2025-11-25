@@ -183,15 +183,21 @@ section {
 
 .whatsapp-float {
   position: fixed;
-  bottom: 10vh;
-  right: 6vh;
+  bottom: 8vh;
+  right: 3vh;
   z-index: 1000
 }
 
-footer {
+.Sobre-nós .LogoEmpresa{
+  padding-top:5%;
+  width: 25vh;
+  margin-left: 19vw;
+}
+
+/* footer {
   background: linear-gradient(to right, #080700, #c58930);
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   font-size: 30px;
-}
+} */
