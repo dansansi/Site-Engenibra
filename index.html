@@ -14,11 +14,17 @@
 <body>
   <header>
     <img class = "LogoEmpresa" src="assets/logo-cut.png" alt="Logo da Engenibra">
-    <nav>
+    <nav id="menu">
       <a class = "TituloHeader" href="#Início">Início</a>
       <a class = "TituloHeader" href="#Projetos">Nossos Projetos</a>
       <a class = "TituloHeader" href="#Sobre-nós">Quem somos</a>
     </nav>
+
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
   </header>
   <main>
     <section class ="Inicio" id="Início">
@@ -30,15 +36,15 @@
     <section class="Projetos" id="Projetos"><br>
       <h1 class = "TituloSessão">Nossos projetos</h1>
       <div class="scroll-container">
+      <div class="item"><img src="assets/Projeto1.jpg" alt=""></div>
+      <div class="item"><img src="assets/Projeto2.jpg" alt=""></div>
+      <div class="item"><img src="assets/Projeto3.jpg" alt=""></div>
       <div class="item"><img src="assets/Projeto4.jpg" alt=""></div>
       <div class="item"><img src="assets/Projeto5.jpg" alt=""></div>
       <div class="item"><img src="assets/Projeto6.jpg" alt=""></div>
       <div class="item"><img src="assets/Projeto7.jpg" alt=""></div>
       <div class="item"><img src="assets/Projeto8.jpg" alt=""></div>
       <div class="item"><img src="assets/Projeto9.jpg" alt=""></div>
-      <div class="item"><img src="assets/Projeto10.jpg" alt=""></div>
-      <div class="item"><img src="assets/Projeto11.jpg" alt=""></div>
-      <div class="item"><img src="assets/Projeto12.jpg" alt=""></div>
     </div>
     </section>
 
@@ -59,9 +65,13 @@
   </a>
 
   </main>
-  <!-- <footer>
-    
-      Footer
-  </footer> -->
 </body>
 </html>
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.getElementById("menu");
+
+  hamburger.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+</script>
