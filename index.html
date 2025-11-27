@@ -36,15 +36,66 @@
     <section class="Projetos" id="Projetos"><br>
       <h1 class = "TituloSessão">Nossos projetos</h1>
       <div class="scroll-container">
-      <div class="item"><img src="assets/Projeto1.jpg" alt=""></div>
-      <div class="item"><img src="assets/Projeto2.jpg" alt=""></div>
-      <div class="item"><img src="assets/Projeto3.jpg" alt=""></div>
-      <div class="item"><img src="assets/Projeto4.jpg" alt=""></div>
-      <div class="item"><img src="assets/Projeto5.jpg" alt=""></div>
-      <div class="item"><img src="assets/Projeto6.jpg" alt=""></div>
-      <div class="item"><img src="assets/Projeto7.jpg" alt=""></div>
-      <div class="item"><img src="assets/Projeto8.jpg" alt=""></div>
-      <div class="item"><img src="assets/Projeto9.jpg" alt=""></div>
+
+      <div class="item">
+  <a href="#zoom" data-img="assets/Projeto1.jpg">
+    <img src="assets/Projeto1.jpg" alt="">
+  </a>
+</div>
+
+<div class="item">
+  <a href="#zoom" data-img="assets/Projeto2.jpg">
+    <img src="assets/Projeto2.jpg" alt="">
+  </a>
+</div>
+
+<div class="item">
+  <a href="#zoom" data-img="assets/Projeto3.jpg">
+    <img src="assets/Projeto3.jpg" alt="">
+  </a>
+</div>
+
+<div class="item">
+  <a href="#zoom" data-img="assets/Projeto4.jpg">
+    <img src="assets/Projeto4.jpg" alt="">
+  </a>
+</div>
+
+<div class="item">
+  <a href="#zoom" data-img="assets/Projeto5.jpg">
+    <img src="assets/Projeto5.jpg" alt="">
+  </a>
+</div>
+
+<div class="item">
+  <a href="#zoom" data-img="assets/Projeto6.jpg">
+    <img src="assets/Projeto6.jpg" alt="">
+  </a>
+</div>
+
+<div class="item">
+  <a href="#zoom" data-img="assets/Projeto7.jpg">
+    <img src="assets/Projeto7.jpg" alt="">
+  </a>
+</div>
+
+<div class="item">
+  <a href="#zoom" data-img="assets/Projeto8.jpg">
+    <img src="assets/Projeto8.jpg" alt="">
+  </a>
+</div>
+
+<div class="item">
+  <a href="#zoom" data-img="assets/Projeto9.jpg">
+    <img src="assets/Projeto9.jpg" alt="">
+  </a>
+</div>
+
+<div id="zoom" class="modal-img">
+  <a href="#Projetos" class="modal-close"></a>
+  <img id="zoomed-img" src="" alt="">
+</div>
+
     </div>
     </section>
 
@@ -70,6 +121,12 @@
 <script>
   const hamburger = document.getElementById("hamburger");
   const menu = document.getElementById("menu");
+
+    document.querySelectorAll('a[href="#zoom"]').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('zoomed-img').src = link.dataset.img;
+    });
+  });
 
   hamburger.addEventListener("click", () => {
     menu.classList.toggle("show");
