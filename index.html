@@ -14,11 +14,17 @@
 <body>
   <header>
     <img class = "LogoEmpresa" src="assets/logo-cut.png" alt="Logo da Engenibra">
-    <nav>
+    <nav id="menu">
       <a class = "TituloHeader" href="#Início">Início</a>
-      <a class = "TituloHeader" href="#Projetos">Projetos</a>
-      <a class = "TituloHeader" href="#Sobre-nós">Sobre nós</a>
+      <a class = "TituloHeader" href="#Projetos">Nossos Projetos</a>
+      <a class = "TituloHeader" href="#Sobre-nós">Quem somos</a>
     </nav>
+
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
   </header>
   <main>
     <section class ="Inicio" id="Início">
@@ -27,24 +33,31 @@
         a engenibra faz isso por você.</p>
     </section>
 
-    <section class="Projetos" id="Projetos">
+    <section class="Projetos" id="Projetos"><br>
       <h1 class = "TituloSessão">Nossos projetos</h1>
       <div class="scroll-container">
+      <div class="item"><img src="assets/Projeto1.jpg" alt=""></div>
+      <div class="item"><img src="assets/Projeto2.jpg" alt=""></div>
+      <div class="item"><img src="assets/Projeto3.jpg" alt=""></div>
       <div class="item"><img src="assets/Projeto4.jpg" alt=""></div>
       <div class="item"><img src="assets/Projeto5.jpg" alt=""></div>
       <div class="item"><img src="assets/Projeto6.jpg" alt=""></div>
       <div class="item"><img src="assets/Projeto7.jpg" alt=""></div>
       <div class="item"><img src="assets/Projeto8.jpg" alt=""></div>
       <div class="item"><img src="assets/Projeto9.jpg" alt=""></div>
-      <div class="item"><img src="assets/Projeto10.jpg" alt=""></div>
-      <div class="item"><img src="assets/Projeto11.jpg" alt=""></div>
-      <div class="item"><img src="assets/Projeto12.jpg" alt=""></div>
     </div>
     </section>
 
-    <section class="Sobre-nós" id="Sobre-nós">
-      <h1 class = "TituloSessão">Sobre Nós</h1>
-      <p>Informações sobre a equipe e o propósito do site.</p>
+    <section class="Sobre-nós" id="Sobre-nós"><br><br><br>
+      <h1 class = "TituloSessão">Quem somos</h1><br>
+      <p>A Engenibra é uma empresa referência em engenharia e construção de alto padrão, unindo sofisticação, qualidade e inovação em cada projeto. Nosso compromisso é transformar ideias em realidade, entregando obras que refletem excelência, durabilidade e elegância em cada detalhe.
+      </p><br><br>
+      <p>Com uma equipe de profissionais experientes e apaixonados pelo que fazem, a Engenibra atua em todas as etapas do processo construtivo — do planejamento à execução — sempre com rigor técnico, acabamentos de luxo e padrões superiores de qualidade.
+      </p><br><br>
+      <p>Mais do que construir, criamos espaços que inspiram, valorizam o tempo e o investimento de nossos clientes. Cada empreendimento da Engenibra é resultado de engenharia precisa, design refinado e comprometimento com a perfeição.
+      </p><br><br>
+      <h3>Engenibra - <em>"Engenharia que traduz sofisticação e confiança".</em></h2>
+      <img class = "LogoEmpresa" src="assets/logo-cut.png" alt="Logo da Engenibra">
     </section>
 
   <a href="https://wa.me/+558008880020" target="_blank" class="whatsapp-float">
@@ -52,8 +65,13 @@
   </a>
 
   </main>
-  <footer>
-      Footer
-  </footer>
 </body>
 </html>
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.getElementById("menu");
+
+  hamburger.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+</script>
